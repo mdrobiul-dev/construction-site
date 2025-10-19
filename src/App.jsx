@@ -1,3 +1,5 @@
+import Navbar from "./components/Navbar"
+import Home from "./pages/Home"
 
 
 function App() {
@@ -5,9 +7,8 @@ function App() {
 
   return (
     <>
-    <h1 class="text-3xl font-bold underline">
-    Hello world!
-  </h1>
+    <Navbar/>
+    <Home/>
     </>
   )
 }
