@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from '../component/Registration/Header';
-import Footer from '../component/Registration/Footer';
+import Header from '../components/Registration/Header';
+import Footer from '../components/Registration/Footer';
 
 const Registration = () => {
      const [formData, setFormData] = useState({

@@ -1,6 +1,6 @@
 import React from "react";
-import exp from "../images/exp.png";
-import imggg from '../images/lolo.png'
+import exp from "/images/exp.png";
+import imggg from '/images/lolo.png'
 
 const Experience = () => {
   return (

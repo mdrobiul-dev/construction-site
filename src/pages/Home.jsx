@@ -1,14 +1,19 @@
 import React from 'react'
-import Banner from '../components/Banner'
-import Experience from '../components/Experience'
-import Catalog from '../components/Catalog'
+
+
+
+import Navbar from '../components/Landingpage/Navbar'
+import Banner from '../components/Landingpage/Banner'
+import Experience from '../components/Landingpage/Experience'
+import Catalog from '../components/Landingpage/Catalog'
 
 const Home = () => {
   return (
     <>
-    <Banner/>
-    <Experience/>
-    <Catalog/>
+    <Navbar />
+    <Banner />
+    <Experience />
+    <Catalog />
     
     </>
   )

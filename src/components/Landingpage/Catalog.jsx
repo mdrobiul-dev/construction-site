@@ -1,12 +1,13 @@
 import React from "react";
-import CommonCatalog from "./common/CommonCatalog";
-import catimg1 from "../images/div.service-img.png";
+
+import CommonCatalog from "./CommonCatalog";
+import catimg1 from "/images/div.service-img.png";
 import { PiCraneDuotone, PiSolarRoof } from "react-icons/pi";
-import catimg2 from "../images/2.png";
+import catimg2 from "/images/2.png";
 import { BsBuilding } from "react-icons/bs";
-import catimg3 from "../images/3.png";
+import catimg3 from "/images/3.png";
 import { FiHome } from "react-icons/fi";
-import catimg4 from "../images/4.png";
+import catimg4 from "/images/4.png";
 
 const Catalog = () => {
   return (

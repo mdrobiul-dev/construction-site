@@ -1,6 +1,5 @@
 import React from 'react'
-import Navbar from './components/Navbar'
-import Home from './pages/Home'
+
 import Teampage from "./pages/Teampage"
 
 
@@ -8,7 +7,9 @@ import JOBS from './pages/JOBS'
 
 import Registration from "./pages/Registration"
 
-import Portfolio from "./Portfolio"
+
+import Landingpage from './pages/Landingpage'
+import Portfolio from './pages/Portfolio'
 
 
 
@@ -17,21 +18,21 @@ const App = () => {
 
 <>
       
-     {/* <JOBS/> */}
    
 
-  {/* <Registration /> */}
+  <Registration />
 
+     {/* <JOBS/> */}
     
     
-  {/* <Portfolio /> */}
+  <Portfolio />
 
-<Navbar/>
-<Home/>
+
  
 
    
    {/* <Teampage /> */}
+   {/* <Landingpage /> */}
     </>
 
   )

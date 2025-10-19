@@ -1,5 +1,5 @@
 import React from "react";
-import logo from '../images/logo.png'
+import logo from '/images/logo.png'
 import { GoPerson } from "react-icons/go";
 import { CiHeart } from "react-icons/ci";
 import { BsCart2 } from "react-icons/bs";
