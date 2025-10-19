@@ -1,5 +1,3 @@
-
-import React from 'react'
 import JOBS from './pages/JOBS'
 
 import Registration from "./pages/Registration"
@@ -9,11 +7,10 @@ const App = () => {
   return (
 
       <>
-    <div>
-      <JOBS/>
-    </div>
+     {/* <JOBS/> */}
+   
 
-  {/* <Registration /> */}
+  <Registration />
     </>
 
   )
