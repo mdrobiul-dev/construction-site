@@ -29,6 +29,29 @@ adipisci velit, sed quia non numquam</p>
             </div>
         </div>
       </section>
+      <section className='3rd container mx-auto grid grid-cols-2 my-32'>
+        <div className=''>
+          <img src="/images/port_3rdsec.png" />
+          </div>
+        <div className='wahid'>
+          <h4 className='font-extrabold text-4xl pb-5'>What We Do!</h4>
+          <p className='pb-2.5'>It is a long established fact that a reader will be distracted by the
+readable content of a page when looking at its layout</p>
+          <ul className='grid grid-rows-3 gap-2.5 list-disc list-inside text-lg'>
+            <li> World Wide Donation</li>
+            <li> World Wide Donation</li>
+            <li> World Wide Donation</li>
+          </ul>
+          <h4 className='font-extrabold text-4xl pt-20 pb-5'>What We Do!</h4>
+          <p className='pb-2.5'>It is a long established fact that a reader will be distracted by the
+readable content of a page when looking at its layout</p>
+          <ul className='grid grid-rows-3 gap-2.5 list-disc list-inside text-lg'>
+            <li> World Wide Donation</li>
+            <li> World Wide Donation</li>
+            <li> World Wide Donation</li>
+          </ul>
+        </div>
+      </section>
       <footer className="bg-gray-900 text-white py-12">
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
