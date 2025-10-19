@@ -1,0 +1,14 @@
+.main_nav_part{
+    
+   
+    height: 400px;
+    background-image:url("/public/Section.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.icon{
+    color: #FF6600;
+}
+
+

@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './components/Navbar'
 import Home from './pages/Home'
+import Teampage from "./pages/Teampage"
 
 
 import JOBS from './pages/JOBS'
@@ -27,7 +28,12 @@ const App = () => {
 
 <Navbar/>
 <Home/>
-  </>
+ 
+
+   
+   {/* <Teampage /> */}
+    </>
+
   )
 }
 

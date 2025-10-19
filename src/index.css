@@ -1,16 +1,16 @@
-@import "tailwindcss";
-
-@utility container {
-  margin-inline: auto;
-}
-
-
+/* ✅ 1. Google font import MUST be at the very top */
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
+/* ✅ 2. Tailwind import comes next */
+@import "tailwindcss";
 
+/* ✅ 3. Custom utilities and theme below */
+@utility container {
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
 
 @theme {
   /* -------------Fonts----- */
-
   --font-exo: "Exo", sans-serif;
 }
