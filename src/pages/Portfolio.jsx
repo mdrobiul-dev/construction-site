@@ -5,6 +5,8 @@ import DarkBtn from '../components/Utility/DarkBtn'
 
 const Portfolio = () => {
   const [isDark, setIsDark] = useState(false);
+  const [isFirstListOpen, setIsFirstListOpen] = useState(false);
+  const [isSecondListOpen, setIsSecondListOpen] = useState(false);
 
   useEffect(() => {
     // Check if there's a saved theme preference
@@ -40,13 +42,13 @@ const Portfolio = () => {
         <div className={`wahid flex justify-center items-center text-center my-20 px-4 ${isDark ? 'text-white' : 'text-black'}`}>
             <div>
             <h3 className='font-bold text-5xl pb-6'>A team of reliable and experienced contractors</h3>
-            <p className='text-lg text-black'>Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
+            <p className={`${isDark ? 'text-white' : 'text-black'}`}>Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
 consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. am Neque
 porro dolor set quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
 adipisci velit, sed quia non numquam</p>
             </div>
             <div>
-            <img src="/images/port_experience.png" alt="about img" />
+            <img src="/images/port_experience.png" alt="" />
             </div>
         </div>
       </section>
@@ -55,22 +57,47 @@ adipisci velit, sed quia non numquam</p>
           <img src="/images/port_3rdsec.png" />
           </div>
         <div className='wahid'>
-          <h4 className='font-extrabold text-4xl pb-5'>What We Do!</h4>
-          <p className='pb-2.5'>It is a long established fact that a reader will be distracted by the
-readable content of a page when looking at its layout</p>
-          <ul className='grid grid-rows-3 gap-2.5 list-disc list-inside text-lg'>
-            <li> World Wide Donation</li>
-            <li> World Wide Donation</li>
-            <li> World Wide Donation</li>
-          </ul>
-          <h4 className='font-extrabold text-4xl pt-20 pb-5'>What We Do!</h4>
-          <p className='pb-2.5'>It is a long established fact that a reader will be distracted by the
-readable content of a page when looking at its layout</p>
-          <ul className='grid grid-rows-3 gap-2.5 list-disc list-inside text-lg'>
-            <li> World Wide Donation</li>
-            <li> World Wide Donation</li>
-            <li> World Wide Donation</li>
-          </ul>
+          <div className="relative">
+            <button 
+              onClick={() => setIsFirstListOpen(!isFirstListOpen)}
+              className={`w-full text-left flex items-center justify-between font-extrabold text-4xl pb-5 ${isDark ? 'text-white' : 'text-black'}`}
+            >
+              <span>What We Do!</span>
+              <span className={`transform transition-transform ${isFirstListOpen ? 'rotate-180' : ''}`}>▼</span>
+            </button>
+            <p className={`pb-2.5 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+              It is a long established fact that a reader will be distracted by the
+              readable content of a page when looking at its layout
+            </p>
+            <div className={`transition-all duration-300 overflow-hidden ${isFirstListOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <ul className={`grid grid-rows-3 gap-2.5 list-disc list-inside text-lg ${isDark ? 'text-gray-200' : 'text-gray-800'} py-4`}>
+                <li> World Wide Donation</li>
+                <li> World Wide Donation</li>
+                <li> World Wide Donation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="relative mt-20">
+            <button 
+              onClick={() => setIsSecondListOpen(!isSecondListOpen)}
+              className={`w-full text-left flex items-center justify-between font-extrabold text-4xl pb-5 ${isDark ? 'text-white' : 'text-black'}`}
+            >
+              <span>What We Do!</span>
+              <span className={`transform transition-transform ${isSecondListOpen ? 'rotate-180' : ''}`}>▼</span>
+            </button>
+            <p className={`pb-2.5 ${isDark ? 'text-gray-300' : 'text-gray-700'}`}>
+              It is a long established fact that a reader will be distracted by the
+              readable content of a page when looking at its layout
+            </p>
+            <div className={`transition-all duration-300 overflow-hidden ${isSecondListOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'}`}>
+              <ul className={`grid grid-rows-3 gap-2.5 list-disc list-inside text-lg ${isDark ? 'text-gray-200' : 'text-gray-800'} py-4`}>
+                <li> World Wide Donation</li>
+                <li> World Wide Donation</li>
+                <li> World Wide Donation</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
       <footer className={`${isDark ? 'bg-gray-800' : 'bg-gray-900'} text-white py-12`}>

@@ -8,6 +8,7 @@ import Landingpage from "./pages/Landingpage";
 import Portfolio from "./pages/Portfolio";
 
 const App = () => {
+  
   return (
     <Router>
       <Routes>
