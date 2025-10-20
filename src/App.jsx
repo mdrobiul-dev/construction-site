@@ -24,9 +24,8 @@ const App = () => {
     <Router>
       {/* <Navbar /> */}
       <Routes>
-        <Route path="/" element={<Landingpage />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/registration" element={<Registration />} />
+        <Route path="/" element={<Registration />} />
+        <Route path="/home" element={<Landingpage />} />
         <Route path="/jobs" element={<JOBS />} />
         <Route path="/portfolio" element={<Portfolio />} />
         <Route path="/team" element={<Teampage />} />
