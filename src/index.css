@@ -4,13 +4,83 @@
   margin-inline: auto;
 }
 
-
-@import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
-
-
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap");
 
 @theme {
   /* -------------Fonts----- */
 
   --font-exo: "Exo", sans-serif;
+}
+
+/* ---------- Theme variables (light defaults) ---------- */
+:root {
+  --bg: #ffffff;
+  --fg: #0f172a; /* slate-900 */
+  --muted: #6b7280; /* slate-500 */
+  --card-bg: #f8fafc; /* slate-50 */
+  --accent: #2563eb; /* blue-600 */
+  --toggle-bg: rgba(17, 24, 39, 0.9);
+  --toggle-fg: #ffffff;
+}
+
+/* Dark theme overrides applied when .dark is on documentElement */
+:root.dark,
+.dark {
+  --bg: #0b1220;
+  --fg: #e6eef8;
+  --muted: #94a3b8;
+  --card-bg: #071025;
+  --accent: #60a5fa; /* blue-400 */
+  --toggle-bg: rgba(230, 238, 248, 0.95);
+  --toggle-fg: #0b1220;
+}
+
+/* Apply variables to page */
+html,
+body,
+#root {
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100%;
+}
+
+body {
+  font-family: var(--font-exo), system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  transition: background 200ms ease, color 200ms ease;
+}
+
+/* Card helper class to use themed background */
+.card {
+  background: var(--card-bg);
+  color: var(--fg);
+  transition: background 200ms ease, color 200ms ease;
+}
+
+/* Theme toggle button */
+.theme-toggle {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0.6rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  background: var(--toggle-bg);
+  color: var(--toggle-fg);
+  box-shadow: 0 6px 18px rgba(2, 6, 23, 0.2);
+  transition: background 150ms ease, color 150ms ease, transform 120ms ease;
+}
+
+.theme-toggle:active {
+  transform: translateY(1px);
+}
+
+.theme-toggle[aria-pressed="true"] {
+  box-shadow: 0 10px 30px rgba(2, 6, 23, 0.32);
+  transform: scale(1.02);
 }
