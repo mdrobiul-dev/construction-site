@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 const App = () => {
     // Images (Ei path-gulo apnar project-er public folder ba relevant path-e thakle kaj korbe)
     const heroImageSrc = 'navbar.jpg';
-    const logoImageSrc = 'image_0d0504.png';
+    // const logoImageSrc = 'image_0d0504.png';
     const footerBannerPlaceholder = "https://placehold.co/1200x200/212121/ffffff?text=ADVERTISEMENT+BANNER";
 
     // --- Theme Logic (Shothik ache) ---
@@ -14,7 +14,8 @@ const App = () => {
         try {
             const saved = window.localStorage.getItem('theme');
             if (saved === 'dark' || saved === 'light') return saved;
-        } catch {}
+        } catch {console.error();
+        }
         // Default to system preference
         return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
     });
@@ -23,7 +24,7 @@ const App = () => {
     useEffect(() => {
         try { 
             window.localStorage.setItem('theme', theme); 
-        } catch {}
+        } catch {console.error()}
     }, [theme]);
 
     const toggleTheme = () => setTheme(t => t === 'dark' ? 'light' : 'dark');
@@ -70,7 +71,7 @@ const App = () => {
             >
                 <div className="max-w-7xl mx-auto px-4 flex justify-between items-center h-20">
                     <div className="flex items-center">
-                        <img src={logoImageSrc} className="h-10 w-auto" alt="Logo" />
+                        {/* <img src={logoImageSrc} className="h-10 w-auto" alt="Logo" /> */}
                         {/* Logo Text Color */}
                         <span style={{ color: colors.textColor }} className="ml-2 text-2xl font-bold transition-colors duration-300">Buildexo</span>
                     </div>
