@@ -45,7 +45,7 @@ const Navbar = () => {
                 {navMenu.map((item, id) => (
                   <a key={id}
                     to={item.navLinks}
-                    className="text-[17px] text-[#100F0F] font-bold font-exo hover:text-[#FF6600] cursor-pointer"
+                    className="text-[17px] text-[#100F0F] dark:text-white font-bold font-exo hover:text-[#FF6600] cursor-pointer"
                   >
                     {item.navContent}
                   </a>

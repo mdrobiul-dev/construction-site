@@ -3,7 +3,7 @@ import React from "react";
 const CommonCatalog = ({ img, icon, textg }) => {
   return (
     <>
-      <div className="main w-[227px]">
+      <div className="main w-[227px] animate-bounce">
         <div className="img">
           <img src={img} alt="img" />
         </div>

@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
+// import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
 import Teampage from "./pages/Teampage";
 import JOBS from "./pages/JOBS";
 import Registration from "./pages/Registration";
 import Landingpage from "./pages/Landingpage";
 import Portfolio from "./pages/Portfolio";
-import Aos from "aos";
+
+import AOS from "aos";
 import "aos/dist/aos.css";
-import { useEffect } from "react";
 
 const App = () => {
   useEffect(() => {
-    Aos.init({ duration: 2000, once: true });
+    AOS.init({
+      duration: 2000, // kept HEAD's longer duration
+      once: true,
+    });
   }, []);
+
   return (
     <Router>
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Landingpage />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/registration" element={<Registration />} />
         <Route path="/jobs" element={<JOBS />} />
         <Route path="/portfolio" element={<Portfolio />} />
@@ -28,3 +36,4 @@ const App = () => {
 };
 
 export default App;
+
