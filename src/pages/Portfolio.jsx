@@ -30,8 +30,8 @@ const Portfolio = () => {
         <DarkBtn isDark={isDark} onToggle={toggleDarkMode} />
       </div>
       
-      <div className='flex flex-col justify-center items-center h-full pb-20'>
-        <h2 className='text-white font-bold text-6xl pb-3'>About us</h2>
+      <div className='flex flex-col justify-center items-center h-full pb-20' data-aos="fade-down" >
+        <h2 className='text-white font-bold text-6xl pb-3'  >About us</h2>
         <p className='flex items-center text-base'>Home    <span className='flex items-center text-red-600 font-bold'>
             <TbPlayerTrackNextFilled/>
 </span> About</p>
