@@ -51,7 +51,7 @@ const Registration = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 dark:bg-gray-900 flex flex-col transition-colors duration-300">
-      {/* Header Banner */}
+      {/* Header */}
       <div className="bg-[url('/banner.jpg')] bg-cover bg-center flex items-center justify-around h-52 relative ">
         <div className="absolute inset-0 bg-black/50"></div>
         <h1 className="text-white text-3xl md:text-4xl font-bold relative z-10 text-center">
@@ -60,7 +60,7 @@ const Registration = () => {
         <div className="flex items-start relative z-10">
           <button
             onClick={toggleTheme}
-            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors"
+            className="p-2 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors cursor-pointer"
           >
             {darkmode ? (
               <MdOutlineNightlightRound className="text-4xl text-yellow-400" />
