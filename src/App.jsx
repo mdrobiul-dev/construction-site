@@ -10,7 +10,6 @@ import Portfolio from "./pages/Portfolio";
 const App = () => {
   
   return (
-    // <Portfolio />
     <Router>
       <Routes>
         <Route path="/" element={<Landingpage />} />
