@@ -41,23 +41,23 @@ const Portfolio = () => {
       <section className='2nd container mx-auto'>
         <div className={`wahid flex justify-center items-center text-center my-20 px-4 ${isDark ? 'text-white' : 'text-black'}`}>
             <div>
-            <h3 className='font-bold text-5xl pb-6'>A team of reliable and experienced contractors</h3>
-            <p className={`${isDark ? 'text-white' : 'text-black'}`}>Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
+            <h3 className='font-bold text-5xl pb-6' data-aos="zoom-in">A team of reliable and experienced contractors</h3>
+            <p data-aos="fade-up" className={`${isDark ? 'text-white' : 'text-black'}`}>Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
 consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. am Neque
 porro dolor set quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
 adipisci velit, sed quia non numquam</p>
             </div>
-            <div>
+            <div className='pl-10' data-aos="fade-left">
             <img src="/images/port_experience.png" alt="" />
             </div>
         </div>
       </section>
       <section className='3rd container mx-auto grid grid-cols-2 my-32'>
-        <div className=''>
+        <div data-aos="fade-right">
           <img src="/images/port_3rdsec.png" />
           </div>
         <div className='wahid'>
-          <div className="relative">
+          <div className="relative" data-aos="fade-left">
             <button 
               onClick={() => setIsFirstListOpen(!isFirstListOpen)}
               className={`w-full text-left flex items-center justify-between font-extrabold text-4xl pb-5 ${isDark ? 'text-white' : 'text-black'}`}
@@ -78,7 +78,7 @@ adipisci velit, sed quia non numquam</p>
             </div>
           </div>
 
-          <div className="relative mt-20">
+          <div data-aos="fade-left" className="relative mt-20">
             <button 
               onClick={() => setIsSecondListOpen(!isSecondListOpen)}
               className={`w-full text-left flex items-center justify-between font-extrabold text-4xl pb-5 ${isDark ? 'text-white' : 'text-black'}`}
@@ -100,7 +100,7 @@ adipisci velit, sed quia non numquam</p>
           </div>
         </div>
       </section>
-      <footer className={`${isDark ? 'bg-gray-800' : 'bg-gray-900'} text-white py-12`}>
+      <footer data-aos="flip-up" className={`${isDark ? 'bg-gray-800' : 'bg-gray-900'} text-white py-12`}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
