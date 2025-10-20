@@ -1,6 +1,8 @@
 /* ✅ 1. Google font import MUST be at the very top */
 @import url('https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100..900;1,100..900&display=swap');
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 /* ✅ 2. Tailwind import comes next */
 @import "tailwindcss";
 
