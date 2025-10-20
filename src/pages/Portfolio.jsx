@@ -1,13 +1,34 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { MdNavigateNext } from 'react-icons/md'
 import { TbPlayerTrackNextFilled } from 'react-icons/tb'
+import DarkBtn from '../components/Utility/DarkBtn'
 
 const Portfolio = () => {
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Check if there's a saved theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      setIsDark(savedTheme === 'dark');
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    const newTheme = !isDark;
+    setIsDark(newTheme);
+    localStorage.setItem('theme', newTheme ? 'dark' : 'light');
+  };
+
   return (
-    <div>
+    <div className={isDark ? 'dark bg-gray-900 text-white' : 'bg-white text-black'}>
         <section>
       <div className='wahid w-full h-64 overflow-hidden rounded-2xl' style={{ backgroundImage: "url('/images/port_sec.png')" }}>
-      <div className='flex flex-col justify-center items-center h-full'>
+      <div className='flex justify-end mr-20 mt-10'>
+        <DarkBtn isDark={isDark} onToggle={toggleDarkMode} />
+      </div>
+      
+      <div className='flex flex-col justify-center items-center h-full pb-20'>
         <h2 className='text-white font-bold text-6xl pb-3'>About us</h2>
         <p className='flex items-center text-base'>Home    <span className='flex items-center text-red-600 font-bold'>
             <TbPlayerTrackNextFilled/>
@@ -16,7 +37,7 @@ const Portfolio = () => {
       </div>
       </section>
       <section className='2nd container mx-auto'>
-        <div className='wahid flex justify-center items-center text-center my-20 px-4'>
+        <div className={`wahid flex justify-center items-center text-center my-20 px-4 ${isDark ? 'text-white' : 'text-black'}`}>
             <div>
             <h3 className='font-bold text-5xl pb-6'>A team of reliable and experienced contractors</h3>
             <p className='text-lg text-black'>Ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia sit
@@ -52,7 +73,7 @@ readable content of a page when looking at its layout</p>
           </ul>
         </div>
       </section>
-      <footer className="bg-gray-900 text-white py-12">
+      <footer className={`${isDark ? 'bg-gray-800' : 'bg-gray-900'} text-white py-12`}>
         <div className="max-w-7xl mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
